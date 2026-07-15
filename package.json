@@ -10,5 +10,8 @@
     "axios": "^1.7.7",
     "form-data": "^4.0.0",
     "formidable": "^3.5.1"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
