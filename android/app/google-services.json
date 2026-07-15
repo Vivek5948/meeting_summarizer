@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122093076862",
+    "project_id": "meeting-summariz",
+    "storage_bucket": "meeting-summariz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122093076862:android:46ca68e04818b554e2332f",
+        "android_client_info": {
+          "package_name": "com.example.meeting_summarizer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDam33IVfF2bInjNOlYCvmltes2M0M4aXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "meeting-summarizer-vercel-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vercel serverless backend for meeting summarizer",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "form-data": "^4.0.0",
+    "formidable": "^3.5.1"
+  }
+}
