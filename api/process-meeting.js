@@ -11,20 +11,27 @@ const config = {
 };
 
 function parseForm(req) {
-  const form = formidable({
-    multiples: false,
-    keepExtensions: true,
-    maxFileSize: 25 * 1024 * 1024,
-  });
+  return new Promise(async (resolve, reject) => {
+    try {
+      const mod = await import('formidable');
+      const formidableFn = mod.formidable || mod.default || mod;
 
-  return new Promise((resolve, reject) => {
-    form.parse(req, (err, fields, files) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve({ fields, files });
-    });
+      const form = formidableFn({
+        multiples: false,
+        keepExtensions: true,
+        maxFileSize: 25 * 1024 * 1024,
+      });
+
+      form.parse(req, (err, fields, files) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve({ fields, files });
+      });
+    } catch (err) {
+      reject(err);
+    }
   });
 }
 

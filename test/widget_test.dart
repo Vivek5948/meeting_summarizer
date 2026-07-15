@@ -13,7 +13,7 @@ void main() {
   testWidgets('renders the app shell', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp(startupError: 'Test mode'));
 
-    expect(find.text('AI Meeting Summarizer'), findsOneWidget);
-    expect(find.textContaining('Firebase is not configured'), findsOneWidget);
+    expect(find.text('Meeting Summarizer'), findsOneWidget);
+    expect(find.textContaining('Firebase is not configured for this platform yet.'), findsOneWidget);
   });
 }
